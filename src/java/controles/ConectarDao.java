@@ -6,7 +6,7 @@ import java.lang.*;
 
 public class ConectarDao {
 private static String servidor = "localhost:3306";
-private static String banco = "fabrica";
+private static String banco = "switchManager";
 
 
 // Método para estabelecer conexão com o banco de dados
