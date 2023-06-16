@@ -6,39 +6,94 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Fresh Food</title>
+        <title>Gerenciamento de Equipamentos</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..200"/>
         <style>
-            .material-symbols-outlined {
-                font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24
+            main{
+                text-align: center;
             }
-            body { color: gray;}
-            h1 { color: black;}
-            h2 { color: darkgray;}
+            
+            section{
+                width: 1200px;
+            }
+            
+            @media(min-width: 1200px){
+                section{
+                    width: 1200px;
+                }
+            }
+            
+            @media(max-width: 1200px){
+                section{
+                    width: 1000px;
+                }
+            }
+            
+            .container{
+                
+            }
+            
+            .elemento{
+                background-color: #8C52FF;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                margin: 0 auto;
+                font-family: "arial";
+                font-weight: bold;
+            }
+            
+            .btn{
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 19px;
+                border-radius: 20px;
+                font-size: 20px;
+                background-color: white;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                width: 350px;
+            }
+            
+            .btn:hover{
+                background-color: #BC9AFF;
+            }
+            
+            .imagem{
+                margin: 20px 0 0 30px;
+            }
+            
         </style>
     </head>
+    
     <body>
-        <img src="image/logo.jpg" alt="" width="300" height="200"/>
-        <h1>Controle de Produtos</h1> 
-        <span class="material-symbols-outlined">person_add</span>
-        <button onclick="document.location='prod_cad.html'">Cadastro</button>
-        <br>      
-        <span class="material-symbols-outlined">plagiarism</span>
-        <button onclick="document.location='prod_cons.html'">Consulta</button>
-        <br> 
-        <span class="material-symbols-outlined">fact_check</span>
-        <button onclick="document.location='prod_cons_geral.jsp'">Consulta Geral</button>
-        <br>         
-        <span class="material-symbols-outlined">update</span>
-        <button onclick="document.location='prod_alterar.html'">Alterar</button> 
-        <br>  
-        <span class="material-symbols-outlined">delete</span>
-        <button onclick="document.location='prod_del.html'">Apagar</button>
-        <br> 
+        <div class="container">
+            <div class="imagem">
+                <img src="image/logo.png" alt="" height="200"/>
+            </div><!-- Imagem logo -->
+            
+            <div class="elemento">
+                <h1 style="margin: 20px 10px 30px 10px; ">Gerenciamento de Equipamentos</h1>
+                    <button class="btn" onclick="document.location='prod_cad.html'">Cadastrar</button>
+                    <br>      
+                    <button class="btn" onclick="document.location='prod_cons.html'">Consultar</button>
+                    <br> 
+                    <button class="btn" onclick="document.location='prod_cons_geral.jsp'">Consulta Geral</button>
+                    <br>         
+                    <button class="btn" onclick="document.location='prod_del.html'">Atualizar</button>
+                    <br>
+                    <button class="btn" onclick="document.location='prod_del.html'">Deletar</button>
+                    <br>
+                    <button class="btn" onclick="document.location='prod_alterar.html'">Consultar Histórico Delete</button> 
+                    <br>  
+                    <button class="btn" onclick="document.location='prod_del.html'">Consultar Histórico Alteração</button>
+                    <br>
+            </div>
+        </div>
     </body>
 </html>
