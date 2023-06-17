@@ -22,14 +22,32 @@
                 padding: 4px;
                 text-align: left;
                 border: 1px solid #8C52FF;
+                text-align: center;
             }
             tr:hover {background-color: #BC9AFF;}
+            .btn{
+                border: none;
+                padding: 5px;
+                cursor: pointer;
+                margin-top: 0px;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                background-color: #8C52FF;
+                width: 100px;
+                color: white;
+            }
+            
+            .btn:hover{
+                background-color: #BC9AFF;
+            }
         </style>
         
     </head>
       <body>
-        <h1>Produtos [Consulta-Lista]</h1>
+        <h1>Consulta Geral de Componentes</h1>
         <%             
+            request.setCharacterEncoding("UTF-8");
             /*-- Consulta --*/                         
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver"); // Driver para MySQL -- Registra a Dll
@@ -86,6 +104,6 @@
             }
         %>    
         <br><br>
-        <button onclick="document.location='index.html'"> Início</button>
+        <button class="btn" onclick="document.location='index.html'"> Início</button>
       </body>
 </html>
