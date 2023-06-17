@@ -6,11 +6,12 @@
             <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/index.html</file>
             <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_alt_edit.jsp</file>
             <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_alt_exec.jsp</file>
-            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/Componentes.java</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_del.html</file>
             <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_add.html</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_cons_del.jsp</file>
             <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_add.jsp</file>
-            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/HistoricoDel.java</file>
-            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/ComponentesDAO.java</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_del.jsp</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_cons_geral.jsp</file>
         </group>
     </open-files>
 </project-private>

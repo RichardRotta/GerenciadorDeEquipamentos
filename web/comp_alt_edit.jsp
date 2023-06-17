@@ -34,7 +34,7 @@
                     <h1>Alteração de equipamentos</h1>              
                     <form name="frmAltForm" method="post" action="comp_alt_exec.jsp">
                         Id: <input type="text" name="id" readonly="true" value="<%= rs.getString("id") %>"> <p>
-                        Switch: <input type="text" name="switch" value="<%= rs.getString("switch") %>"> <p>
+                        Switch: <input type="text" name="nome_switch" value="<%= rs.getString("switch") %>"> <p>
                         Porta Switch: <input type="text" name="porta_switch" value="<%= rs.getString("porta_switch") %>"> <p>
                         Patch Painel: <input type="text" name="patch_painel" value="<%= rs.getString("patch_painel") %>"> <p>
                         Porta Patch Painel: <input type="text" name="porta_patch" value="<%= rs.getString("porta_patchpainel") %>"> <p>
