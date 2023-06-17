@@ -31,18 +31,18 @@
                 ResultSet rs = stmt.executeQuery(sql);
                 while (rs.next()) {
         %>
-                    <h1>Alteração de equipamentos</h1>                
-                    <form name="frmCadProd" method="post" action="comp_alt_exec.jsp">
+                    <h1>Alteração de equipamentos</h1>              
+                    <form name="frmAltForm" method="post" action="comp_alt_exec.jsp">
                         Id: <input type="text" name="id" readonly="true" value="<%= rs.getString("id") %>"> <p>
-                        Switch: <input type="text" name="nome_switch" value="<%= rs.getString("switch") %>"> <p>
+                        Switch: <input type="text" name="switch" value="<%= rs.getString("switch") %>"> <p>
                         Porta Switch: <input type="text" name="porta_switch" value="<%= rs.getString("porta_switch") %>"> <p>
-                        Patch Painel: <input type="text" name="nome_patch" value="<%= rs.getString("patch_painel") %>"> <p>
+                        Patch Painel: <input type="text" name="patch_painel" value="<%= rs.getString("patch_painel") %>"> <p>
                         Porta Patch Painel: <input type="text" name="porta_patch" value="<%= rs.getString("porta_patchpainel") %>"> <p>
-                        Endereço MAC: <input type="text" name="mac" value="<%= rs.getString("end_mac") %>"> <p>
-                        Nome Computador: <input type="text" name="nome_comput" value="<%= rs.getString("nome_pc") %>"> <p>
+                        Endereço MAC: <input type="text" name="end_mac" value="<%= rs.getString("end_mac") %>"> <p>
+                        Nome Computador: <input type="text" name="nome_pc" value="<%= rs.getString("nome_pc") %>"> <p>
                         Endereço IP: <input type="text" name="end_ip" value="<%= rs.getString("end_ip") %>"> <p>
                         Estado: <input type="text" name="estado" value="<%= rs.getString("estado") %>"> <p>
-                        Observações: <input type="text" name="observacao" value="<%= rs.getString("obs") %>"> <p>
+                        Observações: <input type="text" name="obs" value="<%= rs.getString("obs") %>"> <p>
                         <label for="data">Data de Alteração:</label>
                         <input type="date" id="data" name="dt" value="<%= rs.getString("data_hora") %>"> 
                         <br><br>
