@@ -87,7 +87,7 @@
                     out.println("<br> Cod......: " + comp.getId());
                     out.println("<br> Data....:" + comp.getData());
                     out.println("<br> Nome......: " + comp.getNomeSwitch());
-                    out.println("<br> Porta do Switch......: " + comp.getNomeSwitch());
+                    out.println("<br> Porta do Switch......: " + comp.getPortaSwitch());
                     out.println("<br> Patch Panel......: " + comp.getPatchPanel());
                     out.println("<br> Porta do Patch Panel......: " + comp.getPortaPatchPanel());
                     out.println("<br> Endereco MAC......: " + comp.getEndMac());
