@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/richa/Documents/Trabalhos%20Facul/Programação/Projetos/GerenciamentoDeEquipamentos/GerenciamentoDeEquipamentos/src/java/controles/Componentes.java</file>
-            <file>file:/C:/Users/richa/Documents/Trabalhos%20Facul/Programação/Projetos/GerenciamentoDeEquipamentos/GerenciamentoDeEquipamentos/web/comp_alt_exec.jsp</file>
-            <file>file:/C:/Users/richa/Documents/Trabalhos%20Facul/Programação/Projetos/GerenciamentoDeEquipamentos/GerenciamentoDeEquipamentos/web/comp_alt_edit.jsp</file>
-            <file>file:/C:/Users/richa/Documents/Trabalhos%20Facul/Programação/Projetos/GerenciamentoDeEquipamentos/GerenciamentoDeEquipamentos/web/index.html</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/index.html</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_add.html</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/Componentes.java</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/HistoricoAlt.java</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/web/comp_add.jsp</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/ConexaoBancoDAO.java</file>
+            <file>file:/C:/Users/Derick/Documents/NetBeansProjects/Projeto/GerenciadorDeEquipamentos/src/java/controles/ComponentesDAO.java</file>
         </group>
     </open-files>
 </project-private>

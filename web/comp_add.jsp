@@ -57,19 +57,17 @@
             
             
 
-            /*-- Gravaï¿½ï¿½o --*/                         
+            /*-- Gravação --*/                         
             ComponentesDAO comp_add = new ComponentesDAO();
-            if(comp_add.addComp(comp))
-            {
-                out.println("<br> Registro inserido com sucesso!");
-            }
-            else{
-                out.println("<br> Erro:");
-            }
-            request.setCharacterEncoding("UTF-8"); // Muda o Encoding para UTF-8 na requisiï¿½ï¿½o.
+            try {
+                if (comp_add.addComp(comp)) {
+                out.println("<br> Registro inserido com sucesso!");}
+                }catch (Exception ex) {
+                out.println("<br> Ocorreu um erro: " + ex.getMessage());}
+            request.setCharacterEncoding("UTF-8"); // Muda o Encoding para UTF-8 na requisiÃ§Ã£o.
         %>   
         <br><br>
-        <button onclick="document.location='index.html'"> Inï¿½cio</button>
+        <button onclick="document.location='index.html'"> Inicio</button>
     </body>
 </html>
 
