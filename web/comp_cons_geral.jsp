@@ -6,15 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.text.*" import="java.lang.*" import="java.sql.*" import="java.util.Date"%>
-<%@page import="controles.Produto" %>
+<%@page import="controles.Componentes" %>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
-        <title>Consulta de Produtos - Geral</title>
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..200"/>
+        <title>Consulta de todos componentes</title>        
         <style>
             table {
                 border-collapse: collapse;
@@ -23,16 +21,9 @@
             th, td{
                 padding: 4px;
                 text-align: left;
-                border: 1px solid #DDD;
+                border: 1px solid #8C52FF;
             }
-            tr:hover {background-color: #D6EEEE;}            
-            .material-symbols-outlined {
-                font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24
-            }
+            tr:hover {background-color: #BC9AFF;}
         </style>
         
     </head>
@@ -42,11 +33,11 @@
             /*-- Consulta --*/                         
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver"); // Driver para MySQL -- Registra a Dll
-                String url = "jdbc:mysql://localhost:3306/fabrica"; // Determina o servidor e banco(DB)
+                String url = "jdbc:mysql://localhost:3306/switchmanager"; // Determina o servidor e banco(DB)
                 Connection conexao = DriverManager.getConnection(url, "root", "");           
 
                 Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão.                
-                String sql = "SELECT * FROM produto";       
+                String sql = "SELECT * FROM componentes";       
                 
                 ResultSet rs = stmt.executeQuery(sql);
         %>        
@@ -54,10 +45,17 @@
         <table style="width:100%">
             <tr>
                <th>#</th>
-               <th>Id.</th>
-               <th>Nome</th>
-               <th>Valor</th>
-               <th>Fabricação</th>
+               <th>Id</th>
+               <th>Data</th>
+               <th>Switch</th>
+               <th>Porta Switch</th>
+               <th>Patch Painel</th>
+               <th>Porta Patch Painel</th>
+               <th>Endereço MAC</th>
+               <th>Nome Computador</th>
+               <th>Endereço IP</th>
+               <th>Estado</th>
+               <th>Observação</th>
             </tr>
                 
         <%
@@ -65,10 +63,17 @@
         %>
             <tr>
                <td><%= rs.getRow() %></td>
-               <td><%= rs.getString("pk_id") %></td>
-               <td><%= rs.getString("nome") %></td>
-               <td><%= rs.getString("valor") %></td>
-               <td><%= rs.getString("fabricacao") %></td>
+               <td><%= rs.getString("id") %></td>
+               <td><%= rs.getString("data_hora") %></td>
+               <td><%= rs.getString("switch") %></td>
+               <td><%= rs.getString("porta_switch") %></td>
+               <td><%= rs.getString("patch painel") %></td>
+               <td><%= rs.getString("porta_patchpainel") %></td>
+               <td><%= rs.getString("end_mac") %></td>
+               <td><%= rs.getString("nome_pc") %></td>
+               <td><%= rs.getString("end_ip") %></td>
+               <td><%= rs.getString("estado") %></td>
+               <td><%= rs.getString("obs") %></td>
             </tr>
         <%
                 }    
