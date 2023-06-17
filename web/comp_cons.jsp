@@ -6,41 +6,72 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.text.*" import="java.lang.*" import="java.sql.*" import="java.util.Date"%>
-<%@page import="controles.Produto" %>
+<%@page import="controles.Componentes" %>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
-        <title>Consulta de Produtos</title>
+        <title>Consulta de Equipamentos</title>
     </head>
+    
       <body>
-        <h1>Produtos [Consulta-Contém]</h1>
+        <h1>Consulta dos Equipamentos</h1>
         <%
             /*-- Entrada --*/
-            String nome = request.getParameter("nome_prod");           
-
+            String nome = request.getParameter("nome_switch");
+            
             /*-- Consulta --*/                         
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver"); // Driver para MySQL -- Registra a Dll
-                String url = "jdbc:mysql://localhost:3306/fabrica"; // Determina o servidor e banco(DB)
+                String url = "jdbc:mysql://localhost:3306/switchmanager"; // Determina o servidor e banco(DB)
                 Connection conexao = DriverManager.getConnection(url, "root", "");           
 
-                Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão. 
-                
-                /*-- "SELECT * FROM produto WHERE nome LIKE '%de%'" --*/
+                Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão.                
                 String sql = "SELECT * FROM produto WHERE nome LIKE '%" + nome + "%'";       
                 
                 ResultSet rs = stmt.executeQuery(sql);
-                while (rs.next()) {
-                    out.println("<br><br> Registro(s): " + rs.getRow());
-                    out.println("<br> Id: " + rs.getString("pk_id"));
-                    out.println("<br> Nome: " + rs.getString("nome"));
-                    out.println("<br> Valor: " + rs.getString("valor"));
-                    out.println("<br> Data de fabricação: " + rs.getString("fabricacao"));
-                }                          
-                stmt.close();                
+        %>        
+               
+        <table style="width:100%">
+            <tr>
+               <th>#</th>
+               <th>Id</th>
+               <th>Data</th>
+               <th>Switch</th>
+               <th>Porta Switch</th>
+               <th>Patch Painel</th>
+               <th>Porta Patch Painel</th>
+               <th>Endereço MAC</th>
+               <th>Nome Computador</th>
+               <th>Endereço IP</th>
+               <th>Estado</th>
+               <th>Observação</th>
+            </tr>
                 
+        <%
+                while (rs.next()) {
+        %>
+            <tr>
+               <td><%= rs.getRow() %></td>
+               <td><%= rs.getString("id") %></td>
+               <td><%= rs.getString("data_hora") %></td>
+               <td><%= rs.getString("switch") %></td>
+               <td><%= rs.getString("porta_switch") %></td>
+               <td><%= rs.getString("patch painel") %></td>
+               <td><%= rs.getString("porta_patchpainel") %></td>
+               <td><%= rs.getString("end_mac") %></td>
+               <td><%= rs.getString("nome_pc") %></td>
+               <td><%= rs.getString("end_ip") %></td>
+               <td><%= rs.getString("estado") %></td>
+               <td><%= rs.getString("obs") %></td>
+            </tr>
+        <%
+                }    
+        %>
+        </table>
+        <%
+                stmt.close();             
             } catch (Exception ex) {
                 out.println("<br> Erro:" + ex);
             }

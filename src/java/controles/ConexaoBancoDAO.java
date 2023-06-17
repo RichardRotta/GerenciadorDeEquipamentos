@@ -4,7 +4,7 @@ import java.sql.*;
 import java.lang.*;
 
 
-public class ConectarDao {
+public class ConexaoBancoDAO {
 private static String servidor = "localhost:3306";
 private static String banco = "switchManager";
 
