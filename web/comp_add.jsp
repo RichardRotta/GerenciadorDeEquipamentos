@@ -1,7 +1,7 @@
 <%-- 
-    Document   : prod_cad.jsp
-    Created on : 16/05/2023, 21:03:31
-    Author     : alunos
+    Document   : comp_cad.jsp
+    Created on : 16/06/2023, 21:03:31
+    Author     : Richard e Detick
 --%>
 
 <%@page contentType="text/html;charset=ISO-8859-1"%>
@@ -12,18 +12,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">        
-        <title>Cadastro de Produtos</title>
+        <title>Adicionando Equipamento</title>
     </head>
     <body>
-        <h1>Produtos [Cadastro]</h1>
+        <h1>Adicionando Equipamento</h1>
         <%
             
             /*-- Entrada --*/
-            String nome = request.getParameter("nome_prod");
-            float valor = Float.parseFloat(request.getParameter("valor"));
-            Date fabrica = DataUtils.converterStringParaData(request.getParameter("fabrica"));
-
-
+            String nome = request.getParameter("nome_switch");
+            float valor = Float.parseFloat(request.getParameter("porta_switch"));
+            Date fabrica = DataUtils.converterStringParaData(request.getParameter("dtHora"));
+            
             /*-- Process --*/
             Produto prod = new Produto(0, nome, valor, fabrica);
 
