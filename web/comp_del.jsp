@@ -1,7 +1,7 @@
 <%-- 
-    Document   : prod_cad.jsp
+    Document   : comp_del.jsp
     Created on : 16/05/2023, 21:03:31
-    Author     : alunos
+    Author     : Derick
 --%>
 
 <%@page import="controles.ComponentesDAO"%>
@@ -13,15 +13,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
-        <title>Apagar Produtos</title>
+        <title>Deletar</title>
     </head>
     <body>
-    <h1>Produtos [Apagar]</h1>
+    <h1>Componentes [Deletar]</h1>
     <%         
-        /*-- Entrada --*/
+        //Entrada //
         String id = request.getParameter("id"); // Recebendo do .html
 
-        /*-- Execução DB --*/
+        // Execução DB //
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Driver para MySQL - Registra a Dll
             String url = "jdbc:mysql://localhost:3306/switchmanager"; // Determina o servidor e banco(DB)
@@ -53,7 +53,7 @@
                 ComponentesDAO comp_del = new ComponentesDAO();
                 comp_del.DelComp(historicoDel);
                 
-                // Executar a exclusão na tabela produto
+                // Executar a exclusão na tabela componentes
                 String deleteSql = "DELETE FROM componentes WHERE id = " + id;
                 int i = stmt.executeUpdate(deleteSql);
 

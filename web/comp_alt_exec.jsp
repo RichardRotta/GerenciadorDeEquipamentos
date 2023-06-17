@@ -18,9 +18,9 @@
         <%
             /*-- Entrada --*/
             int id = Integer.parseInt(request.getParameter("id"));
-            String nomeSwitch = request.getParameter("switch");
+            String nomeSwitch = request.getParameter("nome_switch");
             int portaSwitch = Integer.parseInt(request.getParameter("porta_switch"));
-            String patchPainel = request.getParameter("patch_painel");
+            String patchPainel = request.getParameter("nome_patch");
             String converterInt = request.getParameter("porta_patch");
             int portaPatchPainel = Integer.parseInt(converterInt);
             String endMac = request.getParameter("end_mac");
@@ -28,7 +28,7 @@
             String endIP = request.getParameter("end_ip");
             String estado = request.getParameter("estado");
             String observacao = request.getParameter("obs");
-            Date data = DataUtils.converterStringParaData(request.getParameter("data"));
+            Date data = DataUtils.converterStringParaData(request.getParameter("dt"));
 
             /*-- Process --*/
             Componentes comp = new Componentes(0, data, nomeSwitch, portaSwitch, patchPainel, portaPatchPainel, endMac, nomePC, endIP, estado, observacao);
@@ -57,7 +57,7 @@
                 Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão. 
                 
                 /*-- "UPDATE produto SET nome='[value-2]', valor='[value-3]', fabricacao='[value-4]' WHERE 1" --*/
-                String sql = "UPDATE componetes SET data_hora='" + s_dt_comp + "'switch='" + comp.getNomeSwitch() + "', porta_switch= " + comp.getPortaSwitch() + 
+                String sql = "UPDATE componetes SET data_hora='" + s_dt_comp + "', sswitch='" + comp.getNomeSwitch() + "', porta_switch= " + comp.getPortaSwitch() + 
                 ", patch_painel'" + comp.getPatchPanel() + "' porta_patchpainel=" + comp.getPortaPatchPanel() + " end_mac='" + comp.getEndMac() + 
                 "' nome_pc='" + comp.getNomePC() + "' end_ip='" + comp.getEndIP() + "' estado='" + comp.getEstado() + "' obs='" + comp.getObservacao() + 
                 "' WHERE id = " + id;            

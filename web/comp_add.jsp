@@ -57,7 +57,7 @@
             
             
 
-            /*-- Gravação --*/                         
+            /*-- GravaÃ§Ã£o ao bd --*/                         
             ComponentesDAO comp_add = new ComponentesDAO();
             try {
                 if (comp_add.addComp(comp)) {

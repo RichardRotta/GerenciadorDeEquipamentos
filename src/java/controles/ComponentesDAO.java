@@ -18,7 +18,7 @@ public boolean addComp(Componentes p_comp) throws ClassNotFoundException{
       
         PreparedStatement sql_comando = conn.prepareStatement(sql_INSERT);
         
-        
+        //Atribui o comando ao banco
         sql_comando.setDate(1, new Date(p_comp.getData().getTime())); // Define a data usando java.sql.Date
         sql_comando.setString(2, p_comp.getNomeSwitch());
         sql_comando.setInt(3, p_comp.getPortaSwitch());
@@ -31,10 +31,11 @@ public boolean addComp(Componentes p_comp) throws ClassNotFoundException{
         sql_comando.setString(10, p_comp.getObservacao());
 
 
-        sql_comando.executeUpdate(); //executa comando SQL
+        sql_comando.executeUpdate(); //executa o comando SQL
         conn.close();
 
         return true;
+
     } catch (SQLException ex) {
          System.out.println("<br> Erro:" + ex);
          return false;
@@ -49,7 +50,7 @@ public boolean AltComp(HistoricoAlt p_altComp) throws ClassNotFoundException{
       
         PreparedStatement sql_comando = conn.prepareStatement(sql_INSERT);
         
-        
+        //Atribui o comando ao banco
         sql_comando.setDate(1, new Date(p_altComp.getData_alt().getTime())); // Define a data usando java.sql.Date
         sql_comando.setString(2, p_altComp.getNomeSwitch_alt());
         sql_comando.setInt(3, p_altComp.getPortaSwitch_alt());
@@ -80,7 +81,7 @@ public boolean DelComp(HistoricoDel p_delComp) throws ClassNotFoundException{
       
         PreparedStatement sql_comando = conn.prepareStatement(sql_INSERT);
         
-        
+        //Atribui o comando ao banco
         sql_comando.setDate(1, new Date(p_delComp.getData_del().getTime())); // Define a data usando java.sql.Date
         sql_comando.setString(2, p_delComp.getNomeSwitch_del());
         sql_comando.setInt(3, p_delComp.getPortaSwitch_del());

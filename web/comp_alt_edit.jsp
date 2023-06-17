@@ -40,11 +40,11 @@
                         Porta Patch Painel: <input type="text" name="porta_patch" value="<%= rs.getString("porta_patchpainel") %>"> <p>
                         Endereço MAC: <input type="text" name="mac" value="<%= rs.getString("end_mac") %>"> <p>
                         Nome Computador: <input type="text" name="nome_comput" value="<%= rs.getString("nome_pc") %>"> <p>
-                        Endereço IP: <input type="text" name="ip" value="<%= rs.getString("end_ip") %>"> <p>
+                        Endereço IP: <input type="text" name="end_ip" value="<%= rs.getString("end_ip") %>"> <p>
                         Estado: <input type="text" name="estado" value="<%= rs.getString("estado") %>"> <p>
                         Observações: <input type="text" name="observacao" value="<%= rs.getString("obs") %>"> <p>
                         <label for="data">Data de Alteração:</label>
-                        <input type="date" id="data" name="data" value="<%= rs.getString("data_hora") %>"> 
+                        <input type="date" id="data" name="dt" value="<%= rs.getString("data_hora") %>"> 
                         <br><br>
                         <input type="reset" value="Limpar">
                         <input type="submit" value="Atualizar" name="salvar"> <p>                   
