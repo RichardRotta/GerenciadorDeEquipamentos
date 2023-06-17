@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Adicionar Equipamentos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                font-family: "arial";
+            }
+            
+            .elemento{
+                background-color: #8C52FF;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                margin: 0 auto;
+                font-weight: bold;
+            }
+            
+            .styleTitle{
+                margin: 30px 20px 30px 20px;
+                font-size: 30px;
+            }
+            
+            .frmStyle{
+                margin: 30px 0 0 10px;
+            }
+            
+            .btn{
+                border: none;
+                padding: 5px;
+                margin-bottom: 15px;
+                margin-right: 10px;
+                cursor: pointer;
+                margin-top: 0px;
+                border-radius: 5px;
+                font-size: 16px;
+                background-color: white;
+                width: 100px;
+            }
+            
+            .btn:hover{
+                background-color: #BC9AFF;
+            }
+            
+       </style>
+    
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="elemento">
+                <h1 class="styleTitle">Adicione o equipamento</h1>
+                <form class="frmStyle" name="frmAddProd" method="post" action="comp_add.jsp">
+                    Switch: <input type="text" name="nome_switch"> <p>
+                    Porta Switch: <input type="text" name="porta_switch"> <p>
+                    Patch Painel: <input type="text" name="nome_patch"> <p>
+                    Porta Patch Painel: <input type="text" name="porta_patch"> <p>
+                    Endereço MAC: <input type="text" name="mac"> <p>
+                    Nome do Computador: <input type="text" name="nome_comput"> <p>
+                    Endereço IP: <input type="text" name="ip"> <p>
+                    Estado: <input type="text" name="estado"> <p>
+                    Observações: <input type="text" name="observacao"> <p>
+                    <label for="dtHora">Data de Fabricação:</label>
+                    <input type="date" id="dtHora" name="dtHora"> 
+                    <br><br>
+                    <input class="btn" type="reset" value="Limpar">
+                    <input class="btn" type="submit" value="Salvar" name="salvar"> <p>
+                </form>
+            </div><!-- elemento -->
+        </div><!-- container -->
+    </body>
+</html>

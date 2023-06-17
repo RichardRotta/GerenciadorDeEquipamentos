@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Deletar Componentes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                font-family: "arial";
+            }
+            
+            .elemento{
+                background-color: #8C52FF;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                margin: 0 auto;
+                font-weight: bold;
+            }
+            
+            .styleTitle{
+                margin: 30px 20px 30px 20px;
+                font-size: 30px;
+            }
+            
+            .frmStyle{
+                margin: 30px 0 0 10px;
+            }
+            
+            .btn{
+                border: none;
+                padding: 5px;
+                margin-bottom: 15px;
+                margin-right: 10px;
+                cursor: pointer;
+                margin-top: 0px;
+                border-radius: 5px;
+                font-size: 16px;
+                background-color: white;
+                width: 100px;
+            }
+            
+            .btn:hover{
+                background-color: #BC9AFF;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="elemento">
+                <h1 class="styleTitle" >Deletar Equipamentos</h1>
+                <form class="frmStyle" name="frmDelComp" method="post" action="comp_del.jsp">
+                    Id: <input type="text" name="id"> <p>            
+                    <input class="btn" type="reset" value="Limpar">
+                    <input class="btn" type="submit" value="Apagar" name="apagar"> <p>                   
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
