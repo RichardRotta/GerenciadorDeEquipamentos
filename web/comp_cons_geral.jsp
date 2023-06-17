@@ -67,7 +67,7 @@
                <td><%= rs.getString("data_hora") %></td>
                <td><%= rs.getString("switch") %></td>
                <td><%= rs.getString("porta_switch") %></td>
-               <td><%= rs.getString("patch painel") %></td>
+               <td><%= rs.getString("patch_painel") %></td>
                <td><%= rs.getString("porta_patchpainel") %></td>
                <td><%= rs.getString("end_mac") %></td>
                <td><%= rs.getString("nome_pc") %></td>

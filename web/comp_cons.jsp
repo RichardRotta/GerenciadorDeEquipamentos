@@ -13,6 +13,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <title>Consulta de Equipamentos</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }      
+            th, td{
+                padding: 4px;
+                text-align: left;
+                border: 1px solid #8C52FF;
+            }
+            tr:hover {background-color: #BC9AFF;}
+        </style>
     </head>
     
       <body>
@@ -28,7 +40,7 @@
                 Connection conexao = DriverManager.getConnection(url, "root", "");           
 
                 Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão.                
-                String sql = "SELECT * FROM produto WHERE nome LIKE '%" + nome + "%'";       
+                String sql = "SELECT * FROM componentes WHERE switch LIKE '%" + nome + "%'";       
                 
                 ResultSet rs = stmt.executeQuery(sql);
         %>        
@@ -58,7 +70,7 @@
                <td><%= rs.getString("data_hora") %></td>
                <td><%= rs.getString("switch") %></td>
                <td><%= rs.getString("porta_switch") %></td>
-               <td><%= rs.getString("patch painel") %></td>
+               <td><%= rs.getString("patch_painel") %></td>
                <td><%= rs.getString("porta_patchpainel") %></td>
                <td><%= rs.getString("end_mac") %></td>
                <td><%= rs.getString("nome_pc") %></td>

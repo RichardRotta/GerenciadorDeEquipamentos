@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
-        <title>Adicionar Equipamentos</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -51,32 +47,18 @@ and open the template in the editor.
             .btn:hover{
                 background-color: #BC9AFF;
             }
-            
-       </style>
-    
+        </style>
     </head>
-    
     <body>
         <div class="container">
             <div class="elemento">
-                <h1 class="styleTitle">Adicione o equipamento</h1>
-                <form class="frmStyle" name="frmAddProd" method="post" action="comp_add.jsp">
-                    Switch: <input type="text" name="nome_switch"> <p>
-                    Porta Switch: <input type="text" name="porta_switch"> <p>
-                    Patch Painel: <input type="text" name="nome_patch"> <p>
-                    Porta Patch Painel: <input type="text" name="porta_patch"> <p>
-                    Endereço MAC: <input type="text" name="mac"> <p>
-                    Nome do Computador: <input type="text" name="nome_comput"> <p>
-                    Endereço IP: <input type="text" name="ip"> <p>
-                    Estado: <input type="text" name="estado"> <p>
-                    Observações: <input type="text" name="observacao"> <p>
-                    <label for="dtHora">Data de Criação:</label>
-                    <input type="date" id="dtHora" name="dtHora"> 
-                    <br><br>
+                <h1 class="styleTitle" >Atualizar Equipamentos</h1>
+                <form class="frmStyle" name="frmAltComp" method="post" action="comp_alt_edit.jsp">
+                    Id: <input type="text" name="id"> <p>            
                     <input class="btn" type="reset" value="Limpar">
-                    <input class="btn" type="submit" value="Salvar" name="salvar"> <p>
+                    <input class="btn" type="submit" value="Salvar" name="Atualizar"> <p>                   
                 </form>
-            </div><!-- elemento -->
-        </div><!-- container -->
+            </div>
+        </div>
     </body>
 </html>

@@ -14,34 +14,40 @@
         <title>Atualização de Equipamentos</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
         <%
             /*-- Entrada --*/
-            String id = request.getParameter("id");  
+            String id = request.getParameter("id");
             /*-- Consulta --*/                         
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver"); // Driver para MySQL -- Registra a Dll
-                String url = "jdbc:mysql://localhost:3306/fabrica"; // Determina o servidor e banco(DB)
+                String url = "jdbc:mysql://localhost:3306/switchmanager"; // Determina o servidor e banco(DB)
                 Connection conexao = DriverManager.getConnection(url, "root", "");           
 
                 Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão. 
                 
                 /*-- "SELECT * FROM produto WHERE nome LIKE '%de%'" --*/
-                String sql = "SELECT * FROM produto WHERE pk_id = " + id;       
+                String sql = "SELECT * FROM componentes WHERE id = " + id;       
                 
                 ResultSet rs = stmt.executeQuery(sql);
                 while (rs.next()) {
         %>
-                    <h1>Produtos [Alteração]</h1>                
-                    <form name="frmCadProd" method="post" action="prod_alt_exec.jsp">
-                        Id: <input type="text" name="id" readonly="true" value="<%= rs.getString("pk_id") %>"> <p>
-                        Nome: <input type="text" name="nome_prod" value="<%= rs.getString("nome") %>"> <p>
-                        Valor: <input type="text" name="valor" value="<%= rs.getString("valor") %>"> <p>
-                        <label for="fabrica">Data de Fabricação:</label>
-                        <input type="date" id="fabrica" name="fabrica" value="<%= rs.getString("fabricacao") %>"> 
+                    <h1>Alteração de equipamentos</h1>                
+                    <form name="frmCadProd" method="post" action="comp_alt_exec.jsp">
+                        Id: <input type="text" name="id" readonly="true" value="<%= rs.getString("id") %>"> <p>
+                        Switch: <input type="text" name="nome_switch" value="<%= rs.getString("switch") %>"> <p>
+                        Porta Switch: <input type="text" name="porta_switch" value="<%= rs.getString("porta_switch") %>"> <p>
+                        Patch Painel: <input type="text" name="nome_patch" value="<%= rs.getString("patch_painel") %>"> <p>
+                        Porta Patch Painel: <input type="text" name="porta_patch" value="<%= rs.getString("porta_patchpainel") %>"> <p>
+                        Endereço MAC: <input type="text" name="mac" value="<%= rs.getString("end_mac") %>"> <p>
+                        Nome Computador: <input type="text" name="nome_comput" value="<%= rs.getString("nome_pc") %>"> <p>
+                        Endereço IP: <input type="text" name="ip" value="<%= rs.getString("end_ip") %>"> <p>
+                        Estado: <input type="text" name="estado" value="<%= rs.getString("estado") %>"> <p>
+                        Observações: <input type="text" name="observacao" value="<%= rs.getString("obs") %>"> <p>
+                        <label for="data">Data de Alteração:</label>
+                        <input type="date" id="data" name="data" value="<%= rs.getString("data_hora") %>"> 
                         <br><br>
                         <input type="reset" value="Limpar">
-                        <input type="submit" value="Salvar" name="salvar"> <p>                   
+                        <input type="submit" value="Atualizar" name="salvar"> <p>                   
                     </form>       
         <%
                 }                          
