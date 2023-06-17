@@ -19,7 +19,7 @@ public class Componentes {
     private String observacao;
     
     //Métodos - Construtor
-    public Componentes(int id,Date data, String nomeSwitch, int portaSwitch, String patchPainel, int portaPatchPainel,
+    public Componentes(int id,Date data, String nomeSwitch, int portaSwitch, String patchPanel, int portaPatchPanel,
                     String endMac,String nomePC, String endIP, String estado, String observacao) 
     {
         this.id = id;
