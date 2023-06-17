@@ -100,13 +100,10 @@
                     ComponentesDAO comp_add = new ComponentesDAO();
                     try {
                         if (comp_add.addComp(comp)) {
-                        %>
-                        <br>    
-                        <%
                         out.println("<br> Registro inserido com sucesso!");}
                         }catch (Exception ex) {
                         out.println("<br> Ocorreu um erro: " + ex.getMessage());}
-                    request.setCharacterEncoding("UTF-8"); // Muda o Encoding para UTF-8 na requisiÃ§Ã£o.
+                    request.setCharacterEncoding("UTF-8"); // Muda o Encoding para UTF-8 na requisição.
                 %>   
                 <br><br>
                 <button class="btn" onclick="document.location='index.html'"> Inicio</button>
