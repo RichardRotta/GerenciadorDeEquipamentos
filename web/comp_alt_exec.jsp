@@ -12,17 +12,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Atualização de Equipamentos</title>
     </head>
     <body>
         <%
+            request.setCharacterEncoding("UTF-8");
             /*-- Entrada --*/
             int id = Integer.parseInt(request.getParameter("id"));
             String nomeSwitch = request.getParameter("switch");
             int portaSwitch = Integer.parseInt(request.getParameter("porta_switch"));
             String patchPainel = request.getParameter("patch_painel");
-            String converterInt = request.getParameter("porta_patch");
-            int portaPatchPainel = Integer.parseInt(converterInt);
+            int portaPatchPainel = Integer.parseInt(request.getParameter("porta_patch"));
             String endMac = request.getParameter("end_mac");
             String nomePC = request.getParameter("nome_pc");
             String endIP = request.getParameter("end_ip");
@@ -57,9 +57,9 @@
                 Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão. 
                 
                 /*-- "UPDATE produto SET nome='[value-2]', valor='[value-3]', fabricacao='[value-4]' WHERE 1" --*/
-                String sql = "UPDATE componetes SET data_hora='" + s_dt_comp + "'switch='" + comp.getNomeSwitch() + "', porta_switch= " + comp.getPortaSwitch() + 
-                ", patch_painel'" + comp.getPatchPanel() + "' porta_patchpainel=" + comp.getPortaPatchPanel() + " end_mac='" + comp.getEndMac() + 
-                "' nome_pc='" + comp.getNomePC() + "' end_ip='" + comp.getEndIP() + "' estado='" + comp.getEstado() + "' obs='" + comp.getObservacao() + 
+                String sql = "UPDATE componetes SET data_hora='" + s_dt_comp + "', switch='" + comp.getNomeSwitch() + "', porta_switch= " + comp.getPortaSwitch() + 
+                ", patch_painel'" + comp.getPatchPanel() + "', porta_patchpainel= " + comp.getPortaPatchPanel() + ", end_mac='" + comp.getEndMac() + 
+                "', nome_pc='" + comp.getNomePC() + "', end_ip='" + comp.getEndIP() + "', estado='" + comp.getEstado() + "', obs='" + comp.getObservacao() + 
                 "' WHERE id = " + id;            
                 
                 /*-- out.println("<br> <br>SQL: " + sql); --*/
