@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.text.*" import="java.lang.*" import="java.sql.*" import="java.util.Date"%>
-<%@page import="controles.Produto" %>
+<%@page import="controles.Componentes" %>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,13 @@
         <h1>Produtos [Consulta-Contém]</h1>
         <%
             /*-- Entrada --*/
-            String nome = request.getParameter("nome_prod");           
+            import java.util.List;
+
+            public interface ProdutoDAO {
+                List<Produto> buscarPorNome(String nome);
+                                                }
+
+            String nome = request.getParameter("nome_switch");           
 
             /*-- Consulta --*/                         
             try{
@@ -28,7 +34,7 @@
 
                 Statement stmt = conexao.createStatement(); // Criar uma instrução com base na conexão. 
                 
-                /*-- "SELECT * FROM produto WHERE nome LIKE '%de%'" --*/
+                -- "SELECT * FROM produto WHERE nome LIKE '%de%'" --
                 String sql = "SELECT * FROM produto WHERE nome LIKE '%" + nome + "%'";       
                 
                 ResultSet rs = stmt.executeQuery(sql);

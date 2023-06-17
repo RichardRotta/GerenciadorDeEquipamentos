@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html;charset=ISO-8859-1"%>
 <%@page import="java.text.*" import="java.lang.*" import="java.sql.*" import="java.util.Date"%>
-<%@page import="controles.Produto" import="controles.ConexaoDao" import="controles.DataUtils"%>
+<%@page import="controles.Componentes" import="controles.ComponentesDAO" import="controles.DataUtils"%>
 
 <!DOCTYPE html>
 <html>
@@ -17,34 +17,59 @@
     <body>
         <h1>Adicionando Equipamento</h1>
         <%
+           
+             
             
-            /*-- Entrada --*/
-            String nome = request.getParameter("nome_switch");
-            float valor = Float.parseFloat(request.getParameter("porta_switch"));
-            Date fabrica = DataUtils.converterStringParaData(request.getParameter("dtHora"));
+            Date data = DataUtils.converterStringParaData(request.getParameter("dtHora"));
+            String nomeSwitch = request.getParameter("nome_switch");
+            String converter_Int = request.getParameter("porta_switch");
+            int portaSwitch = Integer.parseInt(converter_Int);
+           
+            String patchPanel = request.getParameter("nome_patch");
+         
+            String converterInt = request.getParameter("porta_patch");
+            int portaPatchPanel = Integer.parseInt(converterInt);
+            
+            String endMac = request.getParameter("mac");
+            String nomePC = request.getParameter("nome_comput");
+            String endIP = request.getParameter("ip");
+            String estado = request.getParameter("estado");
+            String observacao = request.getParameter("observacao");
+            
+           
             
             /*-- Process --*/
-            Produto prod = new Produto(0, nome, valor, fabrica);
+            Componentes comp = new Componentes(0,data, nomeSwitch, portaSwitch, patchPanel, portaPatchPanel, endMac, nomePC, endIP, estado, observacao);
+            
+            /*-- Saida --*/
+            out.println("<b>Registro [Switch]:</b>");
+            out.println("<br> Cod......: " + comp.getId());
+            out.println("<br> Data:" + comp.getData());
+            out.println("<br> Nome......: " + comp.getNomeSwitch());
+            out.println("<br> Porta do Switch......: " + comp.getNomeSwitch());
+            out.println("<br> Patch Panel......: " + comp.getPatchPanel());
+            out.println("<br> Porta do Patch Panel......: " + comp.getPortaPatchPanel());
+            out.println("<br> Endereco MAC......: " + comp.getEndMac());
+            out.println("<br> Nome do PC......: " + comp.getNomePC());
+            out.println("<br> Endereco IP......: " + comp.getEndIP());
+            out.println("<br> Estado......: " + comp.getEstado());
+            out.println("<br> obs......: " + comp.getObservacao());
+            
+            
 
-            /*-- Saída --*/
-            out.println("<b>Registro [Produto]:</b>");
-            out.println("<br> Cod......: " + prod.getCod());
-            out.println("<br> Nome......: " + prod.getNome());
-            out.println("<br> Valor......: " + prod.getValor());
-            out.println("<br> Data de Fabricação: " + prod.getFabrica()); 
-
-            /*-- Gravação --*/                         
-            ConexaoDao prod_cad = new ConexaoDao();
-            if(prod_cad.cadastrar(prod))
+            /*-- Gravaï¿½ï¿½o --*/                         
+            ComponentesDAO comp_add = new ComponentesDAO();
+            if(comp_add.addComp(comp))
             {
                 out.println("<br> Registro inserido com sucesso!");
             }
             else{
                 out.println("<br> Erro:");
             }
+            request.setCharacterEncoding("UTF-8"); // Muda o Encoding para UTF-8 na requisiï¿½ï¿½o.
         %>   
         <br><br>
-        <button onclick="document.location='index.html'"> Início</button>
+        <button onclick="document.location='index.html'"> Inï¿½cio</button>
     </body>
 </html>
 

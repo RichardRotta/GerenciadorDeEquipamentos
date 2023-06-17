@@ -1,16 +1,15 @@
+//Derick felipe
 package controles;
 
 import java.sql.*;
-import java.lang.*;
 
-
-public class ConectarDao {
+public class ConexaoBancoDAO {
 private static String servidor = "localhost:3306";
-private static String banco = "switchManager";
+private static String banco = "switchmanager";
 
 
-// Método para estabelecer conexão com o banco de dados
-public static Connection conectar() throws ClassNotFoundException {
+// Classe Dao para realizar para estabelecer conexão com o banco de dados
+public static Connection conectar() throws ClassNotFoundException { // Exception do Class.forName da dll
     try {
        Class.forName("com.mysql.cj.jdbc.Driver"); // Driver para MySQL -- Registra a Dll 
        

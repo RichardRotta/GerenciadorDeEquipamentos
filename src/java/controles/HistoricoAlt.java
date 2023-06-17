@@ -45,7 +45,7 @@ public class HistoricoAlt {
     public String getNomePC_alt(){return nomePC_alt;}
     public String getEndIP_alt(){return endIP_alt;}
     public String getEstado_alt(){return estado_alt;}
-    public String getobservacao_alt(){return observacao_alt;}
+    public String getObservacao_alt(){return observacao_alt;}
 
     // Métodos Setters       
     public void setId_alt(int id_alt) {this.id_alt = id_alt;}
@@ -58,7 +58,7 @@ public class HistoricoAlt {
     public void setNomePC_alt(String nomePC_alt) {this.nomePC_alt = nomePC_alt;}
     public void setEndIP_alt(String endIP_alt) {this. endIP_alt =  endIP_alt;}
     public void setEstado_alt(String estado_alt) {this.estado_alt = estado_alt;}
-    public void setobservacao_alt(String observacao_alt) {this.observacao_alt = observacao_alt;}
+    public void setObservacao_alt(String observacao_alt) {this.observacao_alt = observacao_alt;}
 
 
     

@@ -45,7 +45,8 @@ public class Componentes {
     public String getNomePC(){return nomePC;}
     public String getEndIP(){return endIP;}
     public String getEstado(){return estado;}
-    public String getobservacao(){return observacao;}
+    public String getObservacao(){return observacao;}
+    
 
     // Métodos Setters       
     public void setId(int id) {this.id = id;}
@@ -58,7 +59,7 @@ public class Componentes {
     public void setNomePC(String nomePC) {this.nomePC = nomePC;}
     public void setEndIP(String endIP) {this. endIP =  endIP;}
     public void setEstado(String estado) {this.estado = estado;}
-    public void setobservacao(String observacao) {this.observacao = observacao;}
+    public void setObservacao(String observacao) {this.observacao = observacao;}
 
     
    
